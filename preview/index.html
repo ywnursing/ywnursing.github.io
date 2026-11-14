@@ -38,8 +38,15 @@
     color: var(--ink);
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
     line-height: 1.5;
-    overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
+  }
+  /* 잎사귀가 화면 밖으로 삐져나가도 가로 스크롤이 생기지 않게 */
+  .frame {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
   .page {
     position: relative;
@@ -197,6 +204,7 @@
 </style>
 </head>
 <body>
+<div class="frame">
 <div class="page">
   <div class="topline">연세대학교 원주간호대학 간호학과 학생회</div>
 
@@ -259,6 +267,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <script>
   // 아래 두 값만 바꾸면 다른 캘린더에도 그대로 쓸 수 있습니다.
