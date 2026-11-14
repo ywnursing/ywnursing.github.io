@@ -16,9 +16,7 @@
 <link rel="icon" href="chick.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&text=%ED%95%99%EC%83%9D%ED%9A%8C%EC%9D%BC%EC%A0%95&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&text=%E6%96%B0%E8%8A%BD&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
 <style>
   :root {
     --paper: #f1edde;
@@ -43,7 +41,7 @@
     background-color: var(--paper);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     color: var(--ink);
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+    font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
   }
@@ -95,8 +93,8 @@
     align-items: flex-start;
   }
   .mark-big {
-    font-family: "Noto Serif KR", "Apple SD Gothic Neo", serif;
-    font-weight: 900;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
     font-size: 38px;
     line-height: 1;
     letter-spacing: .04em;
@@ -105,9 +103,8 @@
   }
   .mark-big small {
     padding-top: 8px;
-    font-family: "Pretendard Variable", Pretendard, sans-serif;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: .1em;
   }
   .mark-small {
@@ -123,26 +120,22 @@
     position: relative; z-index: 1;
     margin: 0 0 6px;
     font-size: 19px;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: -0.02em;
     color: var(--forest);
   }
   .titlewrap { position: relative; z-index: 1; }
-  .display {
-    margin: 0;
-    font-family: "Black Han Sans", "Pretendard Variable", sans-serif;
-    font-weight: 900;
-    font-synthesis: none;
-    font-size: clamp(74px, 25vw, 118px);
-    line-height: 1;
-    letter-spacing: -0.01em;
-    color: var(--green);
-    text-shadow:
-      3px 0 #fff, -3px 0 #fff, 0 3px #fff, 0 -3px #fff,
-      2px 2px #fff, -2px -2px #fff, 2px -2px #fff, -2px 2px #fff,
-      0 8px 18px rgba(16, 98, 16, .16);
+  .display { margin: 0; line-height: 0; }
+  .display img {
+    display: block;
+    width: 80%;
+    max-width: 340px;
+    height: auto;
+    filter:
+      drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff)
+      drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)
+      drop-shadow(0 8px 14px rgba(16, 98, 16, .16));
   }
-  .display span { display: block; }
   .chick {
     position: absolute;
     right: 2%;
@@ -195,7 +188,7 @@
   .btn + .btn { margin-top: 12px; }
   .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--green-dark); }
   .btn-text { flex: 1; min-width: 0; }
-  .btn-title { display: block; font-size: 18px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+  .btn-title { display: block; font-size: 18px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.3; }
   .btn-sub { display: block; margin-top: 2px; font-size: 13px; font-weight: 500; opacity: .86; letter-spacing: -0.01em; }
   .btn-plus {
     flex: none;
@@ -230,7 +223,7 @@
   .help h2 {
     margin: 0 0 14px;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: -0.02em;
     color: var(--lime);
   }
@@ -274,7 +267,7 @@
     </div>
     <p class="kicker">간호학과 공식 캘린더</p>
     <div class="titlewrap">
-      <h1 class="display" aria-label="학생회 일정"><span>학생회</span><span>일정</span></h1>
+      <h1 class="display"><img src="title.png" alt="학생회 일정" width="1200" height="757"></h1>
       <img class="chick" src="chick.png" alt="간호학과 학생회 캐릭터" width="152" height="178">
     </div>
     <p class="lede">내 캘린더 앱에 한 번만 추가해두면<br>모든 일정이 자동으로 업데이트 됩니다!</p>
