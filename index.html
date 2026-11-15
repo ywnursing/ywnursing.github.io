@@ -317,7 +317,8 @@
 <script>
   // 아래 두 값만 바꾸면 다른 캘린더에도 그대로 쓸 수 있습니다.
   var CALENDAR_ID = "c_e7ae1341069677b363a7f0e18b16bd6828fabcae6b93289db25238a117e9184b@group.calendar.google.com";
-  var GOOGLE_ADD = "https://calendar.google.com/calendar/u/0?cid=" + btoa(CALENDAR_ID);
+  // Google rejects the cid when it keeps base64's trailing "=" padding
+  var GOOGLE_ADD = "https://calendar.google.com/calendar/u/0?cid=" + btoa(CALENDAR_ID).replace(/=+$/, "");
   var APPLE_ADD  = "webcal://calendar.google.com/calendar/ical/" + encodeURIComponent(CALENDAR_ID) + "/public/basic.ics";
 
   document.getElementById("google").href = GOOGLE_ADD;
